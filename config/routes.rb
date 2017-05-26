@@ -11,5 +11,9 @@ end
     end
 end
 
+if Rails.env.development?
+  mount LetterOpenerWeb::Engine, at: "/letter_opener"
+end
+
  root 'top#index'
 end
